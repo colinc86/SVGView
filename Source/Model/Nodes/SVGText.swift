@@ -61,6 +61,6 @@ struct SVGTextView: View {
            .position(x: 0, y: 0) // just to specify that positioning is global, actual coords are in transform
            .apply(paint: fill)
            .transformEffect(model.transform)
-           .frame(alignment: .topLeading)
+//           .frame(alignment: .topLeading)
     }
 }
