@@ -52,14 +52,15 @@ struct SVGTextView: View {
     }
 
     private func filledText(fill: SVGPaint?) -> some View {
-        Text(model.text)
-           .font(model.font?.toSwiftUI())
-           .lineLimit(1)
-           .alignmentGuide(.leading) { d in d[model.textAnchor] }
-           .alignmentGuide(VerticalAlignment.top) { d in d[VerticalAlignment.firstTextBaseline] }
-           .position(x: 0, y: 0) // just to specify that positioning is global, actual coords are in transform
-           .apply(paint: fill)
-           .transformEffect(model.transform)
-           .frame(alignment: .topLeading)
+      print("drawing text with \(model.text)")
+        return Text(model.text)
+//           .font(model.font?.toSwiftUI())
+//           .lineLimit(1)
+//           .alignmentGuide(.leading) { d in d[model.textAnchor] }
+//           .alignmentGuide(VerticalAlignment.top) { d in d[VerticalAlignment.firstTextBaseline] }
+//           .position(x: 0, y: 0) // just to specify that positioning is global, actual coords are in transform
+//           .apply(paint: fill)
+//           .transformEffect(model.transform)
+//           .frame(alignment: .topLeading)
     }
 }
